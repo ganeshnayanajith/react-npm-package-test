@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { FloatingButton } from "react-floating-button";
+// import { FloatingButton } from "react-floating-button";
+import { BugRecorder } from 'ef-bug-recorder-package';
 
 const App: React.FC = () => {
   const [message, setMessage] = useState("");
@@ -10,8 +11,9 @@ const App: React.FC = () => {
       <input type="text" placeholder="Enter your email" style={{ padding: "10px", width: "200px" }} />
       <br />
       <button style={{ marginTop: "10px", padding: "10px 20px", cursor: "pointer" }}>Sign Up</button>
-      <FloatingButton label="Help" onClick={() => setMessage("Need help? Contact support!")} />
+      {/* <FloatingButton label="Help" onClick={() => setMessage("Need help? Contact support!")} /> */}
       {message && <p>{message}</p>}
+      <BugRecorder />
     </div>
   );
 };
